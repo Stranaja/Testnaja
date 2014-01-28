@@ -1,0 +1,31 @@
+Beschreibung zu PhysGUI:
+
+	PhysGUI ist eine grafische Oberfläche für physdiskwrite.
+	Es bietet eine etwas detailliertere Ansich der vorhandenen
+	Disks.
+	Physdiskwrite muss sich im Startverzeichnis von PhysGUI
+	befinden.
+	
+Getestet wurde PhysGUI unter folgenden Betriebssystemen:
+
+	- Windows XP inkl. SP3 und .Net Framework 3.5
+
+
+Fragen an:
+	
+	zweifelurs@gmail.com
+	
+
+Links:
+
+	www.m0n0.ch
+
+	
+Dank an:	
+	
+	Manuel Kasper für die schnelle Anpassung von physdiskwrite
+
+	
+Hinweis: 
+
+	BENUTZUNG AUF EIGENE GEFAHR! 
