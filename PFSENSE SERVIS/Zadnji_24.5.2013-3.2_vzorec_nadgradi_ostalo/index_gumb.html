@@ -13,6 +13,7 @@
 		<!-- include Cycle plugin -->
 		<!-- http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js
 		<script type="text/javascript" src="jquery.cycle.lite.js"></script> -->
+		<script type='text/javascript' src='jquery-1.11.0.min.js'></script>
 	
 		<script type="text/javascript">
 			// ON/OFF switch (ON=1, OFF≠1)
@@ -53,6 +54,25 @@
 					fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 				});
 			});*/
+			
+			$(window).load(function(){
+				$(".header").click(function () {
+
+					$header = $(this);
+					//getting the next element
+					$content = $header.next();
+					//open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+					$content.slideToggle(500, function () {
+						//execute this after slideToggle is done
+						//change text of header based on visibility of content div
+						$header.text(function () {
+							//change text based on condition
+							return $content.is(":visible") ? "Collapse" : "Expand";
+						});
+					});
+				});
+			});
+			
 		</script>
 	</head>
 
@@ -96,8 +116,14 @@
 								<img src="4.jpg" alt="Banner" /> -->
 							</div>
 						</div>
+						
+						
+						
 						<div class="clear"></div>
 					</div><!--banner-->
+					
+					Tralala
+					
 					<div class="page-content">
 						<div id="debug1" class="home-col1 lifted">
 							<h3>Kava z rogljičkom</h3>						
