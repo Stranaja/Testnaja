@@ -55,7 +55,7 @@ b/* @group Page Default */
 .alignright, #alignright, .floatright, #floatright { float: right; }
 
 legend, p, ul, ol, dl, h1, h2, h3, div {
-	color: #754e27;    /*barva aponzorji in ostalo malo besedilo*/
+	color: #754e27;    /*barva sponzorji in ostalo malo besedilo*/
 	font-size: 12px;
 	font-family: Oswald, Arial, sans-serif;
 }
@@ -99,7 +99,7 @@ li {
 }
 
 
-.specialc {
+.offerbutton {
     background-color:#d3d3d3;
     padding: 2px;
     cursor: pointer;
@@ -434,6 +434,8 @@ img.promo-logo {
 	-ms-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
+	
+	display: none;
 }
 
 /* @end */

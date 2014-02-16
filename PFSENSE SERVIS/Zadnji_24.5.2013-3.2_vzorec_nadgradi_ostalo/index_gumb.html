@@ -56,18 +56,18 @@
 			});*/
 			
 			$(window).load(function(){
-				$(".header").click(function () {
+				$(".offerbutton").click(function () {
 
-					$header = $(this);
+					$offerbutton = $(this);
 					//getting the next element
-					$content = $header.next();
+					$content = $offerbutton.next();
 					//open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-					$content.slideToggle(500, function () {
+					$content.slideToggle(0, function () {
 						//execute this after slideToggle is done
 						//change text of header based on visibility of content div
-						$header.text(function () {
+						$offerbutton.text(function () {
 							//change text based on condition
-							return $content.is(":visible") ? "Collapse" : "Expand";
+							return $content.is(":visible") ? "Skrij" : "Naša ponudba";
 						});
 					});
 				});
@@ -116,15 +116,11 @@
 								<img src="4.jpg" alt="Banner" /> -->
 							</div>
 						</div>
-						
-						
-						
 						<div class="clear"></div>
 					</div><!--banner-->
 					
-					<div class="specialc">
-					
-					Tralala
+					<div class="offerbutton">
+						Naša ponudba
 					</div>
 					
 					<div class="page-content">
