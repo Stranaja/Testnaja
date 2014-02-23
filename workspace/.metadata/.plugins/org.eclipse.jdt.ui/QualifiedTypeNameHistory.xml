@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.binary.Base64"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="org.omg.IOP.ENCODING_CDR_ENCAPS"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Display"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Shell"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DropTarget"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.Transfer"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DropTargetEvent"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DropTargetAdapter"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.FileTransfer"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DND"/>
+<fullyQualifiedTypeName name="java.awt.Label"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Label"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.SWT"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.graphics.Color"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.layout.RowData"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.layout.RowLayout"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.layout.FormData"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.layout.FormAttachment"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Composite"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.layout.FormLayout"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Button"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.custom.StyledText"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.events.SelectionListener"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Text"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DragSource"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DragSourceListener"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.dnd.DropTargetListener"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.nio.file.Files"/>
+<fullyQualifiedTypeName name="java.nio.file.CopyOption"/>
+<fullyQualifiedTypeName name="java.nio.file.StandardCopyOption"/>
+</qualifiedTypeNameHistroy>
