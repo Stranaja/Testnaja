@@ -6,12 +6,13 @@ b/* @group Page Default */
 	font-family: inherit;
 	line-height: 1.4;
 }
-::-moz-selection {
-	background: #000000;s
+
+::selection {
+	background: #000000;
 	color: #ffffff;
 }
-}
-::selection {
+
+::-moz-selection {
 	background: #000000;
 	color: #ffffff;
 }
@@ -32,18 +33,11 @@ b/* @group Page Default */
 	text-align: center;
 } 
 
-@font-face {
-	font-family: Oswald;
-	src: url(Parisienne-Regular.ttffff) format('truetype');
-}
+
 
 @font-face {
-  font-family: 'Oregano-Regular';
-  /*src: url('Oregano-Regular.eot');
-  src: local('☺'), 
-       url('Oregano-Regular.woff') format('woff'), */
-       src: url('Oregano-Regular.ttf') format('truetype');
-       /*url('gestareg-webfont.svg#webfontg8dbVmxj') format('svg');*/
+  	font-family: 'Oregano-Regular';
+	src: url(Oregano-Regular.ttf) format('truetype');
 }
 
 .block, #block, .display, #display { display: block; }
@@ -108,36 +102,11 @@ li {
 
 
 a {
-	/*color: #1fb0af;*/
 	text-decoration: none;
 }
 a:hover { text-decoration: underline; }
 a img { border: 0; }
 img { max-width: 100%; height: auto; }
-
-/*input[type=text], input[type=email], textarea {
-	padding: 2px;
-	width: 98%;
-	color: #5e5c5c;
-	font-size: 13px;
-	border: 1px solid #c4c4c4;
-	outline: none;
-	
-	-webkit-box-shadow: inset 0 -2px 2px #cccccc;
-	-moz-box-shadow: inset 0 -2px 2px #cccccc;
-	-ms-box-shadow: inset 0 -2px 2px #cccccc;
-	-o-box-shadow: inset 0 -2px 2px #cccccc;
-	box-shadow: inset 0 -2px 2px #cccccc;
-}
-input[type=text]:focus, input[type=email]:focus, textarea:focus {
-	outline: none;
-	
-	-webkit-box-shadow: inset 0 2px 2px #cccccc;
-	-moz-box-shadow: inset 0 2px 2px #cccccc;
-	-ms-box-shadow: inset 0 2px 2px #cccccc;
-	-o-box-shadow: inset 0 2px 2px #cccccc;
-	box-shadow: inset 0 2px 2px #cccccc;
-}*/
 
 .button::-moz-focus-inner {
   border: 0;
@@ -250,18 +219,11 @@ legend { font-weight: bold; font-size: 18px;}
 
 /* @group Body/Wrapper */
 
-html { 
-	/*background: url(bg.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;*/
-	
+html {
 	background: url(bg.jpg) no-repeat; 
 	background-position:center center; 
 	background-attachment:scroll; 
-	background-size:100% 100%;  
-	
+	background-size:100% 100%;
 }
 
 /* Background image won't show if bg color is set! */
@@ -329,7 +291,6 @@ body {
 	/* Width of actual logo divided by 2 */
 	width: 260px;
 	height: auto;
-	/*background-color: #ffffff;*/
 	float: left;
 }
 
@@ -497,46 +458,6 @@ img.promo-logo {
 	font-weight:bold;
 }
 
-/* Lifted corners */
-
-/*.lifted {
-	-moz-border-radius:4px;
-		 border-radius:4px;
-}
-
-.lifted:before,
-.lifted:after {
-	content:"";
-	position: absolute;
-	bottom:15px;
-	left:10px;
-	width:50%;
-	height:20%;
-	max-width:300px;
-	max-height:100px;
-	-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-	   -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-			box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-	-webkit-transform:rotate(-3deg);
-	   -moz-transform:rotate(-3deg);
-		-ms-transform:rotate(-3deg);
-		 -o-transform:rotate(-3deg);
-			transform:rotate(-3deg);
-}
-
-.lifted:after {
-	content:"";
-	position: absolute;
-	right:10px;
-	left:auto;
-	-webkit-transform:rotate(3deg);
-	   -moz-transform:rotate(3deg);
-		-ms-transform:rotate(3deg);
-		 -o-transform:rotate(3deg);
-			transform:rotate(3deg);
-}*/
-/* Okvir */
-
 .home-col3 {
 	margin-right: 3%;
 }
@@ -550,21 +471,6 @@ img.promo-logo {
 	font-size: 16px;
 	font-family: 'Oregano-Regular', Arial, Helvetica, sans-serif;
 }
-
-/*.home-col1 img, .home-col2 img, .home-col3 img { 
-	position: absolute;
-	display: table-cell;
-
-	bottom: 10px;
-	left: 4%;
-	right: 4%;
-	width: 92%;
-	
-	border: none;
-	not used: display: block;	
-	margin: auto auto;
-}*/
-
 
 .home-col1 img, .home-col2 img, .home-col3 img { 
 	width: 100%;	
