@@ -386,7 +386,8 @@ img.promo-logo {
 	
 	box-shadow: 0 0 6px #523a17;   /*barva notranje senca okvir*/
 }
-.page-content {
+
+.big-box {
 	/*margin: 20px 20px 20px 20px; ops!*/
 	margin: 20px 0px 20px 0px;
 	
@@ -397,6 +398,30 @@ img.promo-logo {
 	transition: all 0.5s ease-in-out;
 	
 	display: none;
+}
+
+.big-box2 {
+	/*margin: 20px 20px 20px 20px; ops!*/
+	margin: 20px 0px 20px 0px;
+	
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.page-content {
+	/*margin: 20px 20px 20px 20px; ops!*/
+	/*margin: 20px 0px 20px 0px;
+	
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	
+	display: none;*/
 }
 
 /* @end */
@@ -686,7 +711,11 @@ and (min-width : 1650px) {
 		height: auto;
 	}
 	
-	.page-content {
+	.big-box {
+		margin-top: 10px;
+	}
+	
+	.big-box2 {
 		margin-top: 10px;
 	}
 	
@@ -848,7 +877,11 @@ and (max-width : 520px) {
 		padding: 10px 10px 0 10px;
 	}
 	
-	.page-content {
+	.big-box {
+		margin: 1%;
+	}
+	
+	.big-box2 {
 		margin: 1%;
 	}
 
