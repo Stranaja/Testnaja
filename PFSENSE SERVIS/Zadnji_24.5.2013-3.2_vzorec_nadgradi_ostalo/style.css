@@ -1019,17 +1019,17 @@ and (max-width : 520px) {
 and (max-width : 460px) {
 
 	.cene-col1, .cene-col2 {
-		width: 88%; 
+		width: 80%; 
 	}
 
 	.cene-col1 {
-		margin-left: 4%;
-		margin-right: 4%;
+		margin-left: 8%;
+		margin-right: 8%;
 	}
 
 	.cene-col2 {
-		margin-left: 4%;
-		margin-right: 4%;
+		margin-left: 8%;
+		margin-right: 8%;
 	}
 
 	.home-col1, .home-col2, .home-col3 {		
@@ -1057,6 +1057,21 @@ and (max-width : 400px) {
 /* One column 4 */
 @media only screen
 and (max-width : 340px) {
+
+	.cene-col1, .cene-col2 {
+		width: 92%; 
+	}
+
+	.cene-col1 {
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.cene-col2 {
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
 	.home-col1, .home-col2, .home-col3 {		
 		height: 294px;		
 	}
