@@ -821,6 +821,37 @@ and (max-width : 962px) {
 	}
 }
 
+/* price list */
+@media only screen
+and (max-width : 768px) {
+	
+	.cene-col1, .cene-col2 {
+		/*border: 0;*/
+		width: 64.0%;
+		/*height: 40%; NE DELUJE! */
+		/*height: 363px;*/
+	}
+	
+	.cene-col1 {
+		margin-left: 8%;
+		margin-right: 24%;
+	}
+	
+	.cene-col2 {
+		margin-left: 24%;
+		margin-right: 8%;
+	}
+	
+	/*.cene-col1 p, .cene-col2 p, .cene-col3 p {
+		font-size: 20px;
+	}
+	
+	.cene-col1 h3, .cene-col2 h3, .cene-col3 h3 {
+		font-size: 30px;
+	}*/
+}
+/* price list */
+
 /* Two column 2 */
 @media only screen
 and (max-width : 832px) {
@@ -957,6 +988,20 @@ and (max-width : 520px) {
 /* One column 2 */
 @media only screen
 and (max-width : 460px) {
+
+	.cene-col1, .cene-col2 {
+		width: 88%; 
+	}
+
+	.cene-col1 {
+		margin-left: 2%;
+		margin-right: 6%;
+	}
+
+	.cene-col2 {
+		margin-left: 6%;
+		margin-right: 2%;
+	}
 
 	.home-col1, .home-col2, .home-col3 {		
 		height: 375px;		
