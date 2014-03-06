@@ -459,11 +459,11 @@ img.promo-logo {
 
 .cene-col1, .cene-col2 {
 	float: left;
-	width: 46%;
-	height: 264px;
+	width: 64%;
+	/*height: 320px;*/
+	height: auto;
 	text-align: center;
-	margin-left: 0;
-	margin-bottom: 0;
+	margin-bottom: 20px;
 	/*padding: 0 10px 0 0; padding?! */
 	background-color: #123123;
 
@@ -481,6 +481,16 @@ img.promo-logo {
 	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 			box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.cene-col1 {
+	margin-left: 8%;
+	margin-right: 24%;
+}
+	
+.cene-col2 {
+	margin-left: 24%;
+	margin-right: 8%;
 }
 
 .home-col1:before,
@@ -697,6 +707,24 @@ and (min-width : 1650px) {
 	font-family: 'Oregano-Regular', Arial, Helvetica, sans-serif;
     }
 	
+	.cene-col1, .cene-col2 {		
+		width: 54%;
+		/*height: 320px;*/
+		height: auto;
+		/*padding: 0 10px 0 0; padding?! */
+	}
+
+	.cene-col1 {
+		margin-left: 12%;
+		margin-left: 12%;
+		margin-right: 30%;
+	}
+		
+	.cene-col2 {
+		margin-left: 30%;
+		margin-right: 12%;
+	}
+	
 	.add1, .add2, .add3, .add4 {
 		width: 12.5%;
 	}
@@ -828,6 +856,7 @@ and (max-width : 768px) {
 	.cene-col1, .cene-col2 {
 		/*border: 0;*/
 		width: 64.0%;
+		/*height: 264px;*/
 		/*height: 40%; NE DELUJE! */
 		/*height: 363px;*/
 	}
@@ -934,13 +963,13 @@ and (max-width : 520px) {
 		padding: 10px 10px 0 10px;
 	}
 	
-	.big-box {
+	/*.big-box {
 		margin: 1%;
 	}
 	
 	.big-box2 {
 		margin: 1%;
-	}
+	}*/
 
 	.home-col1, .home-col2, .home-col3 {
 		float: none;
@@ -994,13 +1023,13 @@ and (max-width : 460px) {
 	}
 
 	.cene-col1 {
-		margin-left: 2%;
-		margin-right: 6%;
+		margin-left: 4%;
+		margin-right: 4%;
 	}
 
 	.cene-col2 {
-		margin-left: 6%;
-		margin-right: 2%;
+		margin-left: 4%;
+		margin-right: 4%;
 	}
 
 	.home-col1, .home-col2, .home-col3 {		
