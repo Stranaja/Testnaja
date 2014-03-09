@@ -55,6 +55,24 @@
 				});
 			});*/
 			
+			function setHeight()
+			{
+				/*var height = document.getElementById("home-col1").getAttribute("height");
+				alert(height);*/
+				
+				var result = $("#makaron").height();
+				alert(result);
+				
+				//var myDiv = document.getElementById("banner");
+				//var h = myDiv.clientHeight;
+				//alert(h);
+				
+				myDiv.scrollHeight;
+				myDiv.offsetHeight;
+				
+				//getElementById('div_register').style.width='500px';
+			}
+			
 			$(window).load(function(){
 				$(".offerbutton").click(function () {
 
@@ -76,7 +94,7 @@
 		</script>
 	</head>
 
-	<body onLoad="replaceImages();" onresize="printViewport();">
+	<body onLoad="replaceImages(); setHeight();" onresize="printViewport();">
 		<div class="wrap">
 			<div class="inner-wrap">
 				<div class="header">
@@ -177,8 +195,13 @@
 									<img src="promo1.jpg">
 								</div>
 							</div>
-							<div class="home-col2">
+							<div class="home-col2" id ="makaron">
 								<h3>Izvrsten sladoled</h3>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
 								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
 								<br>
 								<!-- <img src="promo2.png" alt="Sladoled" class="promo-logo"/> -->
@@ -275,7 +298,7 @@
 						
 						</div><!--page-content-->
 					</div>
-
+					
 					<div class="clear-both"></div>
 					<div class ="loginform">
 						<fieldset>
