@@ -56,11 +56,8 @@
 			});*/
 			
 			function setHeight()
-			{
-				/*var height = document.getElementById("home-col1").getAttribute("height");
-				alert(height);*/
-				
-				var height1 = $("#debug1").height();
+			{	
+				var height1 = $("#debug2").height();
 				var height2 = $("#col2").height();
 				var height3 = $("#col3").height();
 				
@@ -75,6 +72,10 @@
 				{
 					maxHeight1 = height3;
 				}
+				
+				$("#debug2").css({height:maxHeight1});
+				$("#col2").css({height:maxHeight1});
+				$("#col3").css({height:maxHeight1});
 				
 				var height4 = $("#col4").height();
 				var height5 = $("#col5").height();
@@ -93,11 +94,6 @@
 				}
 				
 				alert(maxHeight1 + ", " + maxHeight2);
-				
-				//myDiv.scrollHeight;
-				//myDiv.offsetHeight;
-				
-				//getElementById('div_register').style.width='500px';
 			}
 			
 			$(window).load(function(){
@@ -213,40 +209,33 @@
 					
 					<div class="big-box2">
 						<div class="page-content">
-							<div id="debug1" class="home-col1 lifted">
-								<h3>Kava z rogljičkom</h3>						
-								<p>Kava z odličnim francoskim rogljičkom samo 2 EUR vsak dan od 8h do 11h.</p>
-								<br>
-								<!-- <img src="promo1.png" alt="Kava z rogljickom" class="promo-logo"/> -->							
+							<div id="debug2" class="home-col1 lifted">
+								<h3>Kava z rogljičkom</h3>
 								<div class = "promo-div">
 									<img src="promo1.jpg">
-								</div>
+								</div>						
+								<p>Kava z odličnim francoskim rogljičkom samo 2 EUR vsak dan od 8h do 11h.</p>
 							</div>
 							<div class="home-col2"  id="col2">
 								<h3>Izvrsten sladoled</h3>
-								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
-								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
-								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
-								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
-								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
-								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
-								<br>
-								<!-- <img src="promo2.png" alt="Sladoled" class="promo-logo"/> -->
 								<div class = "promo-div">
 									<img src="promo2.jpg">
 								</div>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
+								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
 							</div>
 							<div class="home-col3 lifted" id="col3">
 								<h3>Slastni sendviči</h3>
-								<p>Bogata izbira slastnih sendvičev za vse okuse. Več vrst vegetarjanskih sedvičev.</p>
-								<p>Bogata izbira slastnih sendvičev za vse okuse. Več vrst vegetarjanskih sedvičev.</p>
-								<p>Bogata izbira slastnih sendvičev za vse okuse. Več vrst vegetarjanskih sedvičev.</p>
-
-								<br>
-								<!-- <a href="#" class="promo-logo"> <img src="promo3.png" alt="Kanapeji"/></a> -->
 								<div class = "promo-div">
 									<img src="promo3.jpg">
-								</div>							
+								</div>
+								<p>Bogata izbira slastnih sendvičev za vse okuse. Več vrst vegetarjanskih sedvičev.</p>
+								<p>Bogata izbira slastnih sendvičev za vse okuse. Več vrst vegetarjanskih sedvičev.</p>
+								<p>Bogata izbira slastnih sendvičev za vse okuse. Več vrst vegetarjanskih sedvičev.</p>						
 							</div>
 
 							<div class="home-col1 lifted" id="col4">
