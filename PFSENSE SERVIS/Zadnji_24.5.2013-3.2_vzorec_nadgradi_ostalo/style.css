@@ -776,7 +776,7 @@ and (min-width : 1650px) {
 	
 	.home-col1, .home-col2, .home-col3 {
 		margin-top: 2.5%;
-		height: 385px;
+		height: auto;
 	}
 	.footer {
 		padding-top: 40px;
@@ -828,7 +828,9 @@ and (max-width : 962px) {
 		border: 0;
 		width: 41.5%;
 		/*height: 40%; NE DELUJE! */
-		height: 363px;
+		height: auto;
+		
+		clear: right;
 	}
 	.home-col1 p, .home-col2 p, .home-col3 p {
 		font-size: 20px;
@@ -886,19 +888,18 @@ and (max-width : 768px) {
 @media only screen
 and (max-width : 832px) {
 
-
 	.home-col1, .home-col2, .home-col3 {		
-		height: 310px;		
+		height: auto;		
 	}
 	.home-col1 h3, .home-col2 h3, .home-col3 h3 {
-	font-size: 24px;
-	font-family: 'Oregano-Regular', Arial, Helvetica, sans-serif;
-}
+		font-size: 24px;
+		font-family: 'Oregano-Regular', Arial, Helvetica, sans-serif;
+	}
 
-.home-col1 p, .home-col2 p, .home-col3 p {
-	font-size: 16px;
-	font-family: 'Oregano-Regular', Arial, Helvetica, sans-serif;
-}
+	.home-col1 p, .home-col2 p, .home-col3 p {
+		font-size: 16px;
+		font-family: 'Oregano-Regular', Arial, Helvetica, sans-serif;
+	}
 	
 	.banner-content ul {	
 		font-size: 18px;
@@ -941,7 +942,7 @@ and (max-width : 700px) {
 	
 	.home-col1, .home-col2, .home-col3 {
 		border: 0;
-		height: 275px;
+		height: auto;
 	}
 	
 	.footer-col1 {
@@ -979,8 +980,10 @@ and (max-width : 520px) {
 		/*padding: 0;*/
 		width: auto;
 		/*height: auto; NE DELUJE! */
-		height: 410px;
+		height: auto;
 		margin-bottom: 10%;
+		
+		clear: both;
 	}
 	
 	.home-col1 p, .home-col2 p, .home-col3 p {
@@ -1034,7 +1037,7 @@ and (max-width : 460px) {
 	}
 
 	.home-col1, .home-col2, .home-col3 {		
-		height: 375px;		
+		height: auto;		
 	}
 }
 
@@ -1043,7 +1046,7 @@ and (max-width : 460px) {
 and (max-width : 400px) {
 
 	.home-col1, .home-col2, .home-col3 {		
-		height: 322px;		
+		height: auto;		
 	}
 	
 	.home-col1 p, .home-col2 p, .home-col3 p {
@@ -1074,7 +1077,7 @@ and (max-width : 340px) {
 	}
 
 	.home-col1, .home-col2, .home-col3 {		
-		height: 294px;		
+		height: auto;		
 	}
 	
 	
@@ -1102,7 +1105,7 @@ and (max-width : 340px) {
 @media only screen
 and (max-width : 260px) {
     .home-col1, .home-col2, .home-col3 {		
-		height: 260px;		
+		height: auto;		
 	}
 	.banner-content ul {	
 		font-size: 14px;
