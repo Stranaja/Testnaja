@@ -55,6 +55,7 @@
 						$("#col4").css({height:auto});
 						$("#col5").css({height:auto});
 						$("#col6").css({height:auto});
+					else if (w > 520)
 					{	
 						var height1 = $("#debug2").height();
 						var height2 = $("#col2").height();
@@ -100,8 +101,7 @@
 						
 						//alert(maxHeight1 + ", " + maxHeight2);
 					}
-					
-					if ((w > 962) && (w < 1600))
+					else if (w > 961)
 					{
 						var height1 = $("#debug2").height();
 						var height2 = $("#col2").height();
@@ -143,7 +143,6 @@
 						$("#col5").css({height:maxHeight2});
 						$("#col6").css({height:maxHeight2});
 					}
-					
 				}
 			}
 			/*$(document).ready(function()
