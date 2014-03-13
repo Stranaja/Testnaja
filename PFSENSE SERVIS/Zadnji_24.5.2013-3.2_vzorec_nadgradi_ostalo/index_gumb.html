@@ -33,12 +33,13 @@
 				}
 			}
 		
-			function setDynamicHeight()
+			function setHeight()
 			{
+				var w=document.documentElement.clientWidth;
+				var h=document.documentElement.clientHeight;
+				
 				if (debug==1)
-				{
-					var w=document.documentElement.clientWidth;
-					var h=document.documentElement.clientHeight;
+				{	
 					var txt="Window size: width=" + w + ", height=" + h;
 					
 					// Izpisuje w/h v prvi promo logo
@@ -46,103 +47,104 @@
 					
 					// Izpisuje w/h v login skatlo (gostje imajo...)"
 					document.getElementById("debug3").innerHTML=txt;
+				}
+				
+				if (w < 521)
+				{
+					$("#debug2").css({height:auto});
+					$("#col2").css({height:auto});
+					$("#col3").css({height:auto});
+					$("#col4").css({height:auto});
+					$("#col5").css({height:auto});
+					$("#col6").css({height:auto});
+				}
+				else if (w > 520)
+				{	
+					var height1 = $("#debug2").height();
+					var height2 = $("#col2").height();
 					
-					if (w < 521)
+					var maxHeight1 = height1;
+					
+					if (height2 > height1)
 					{
-						$("#debug2").css({height:auto});
-						$("#col2").css({height:auto});
-						$("#col3").css({height:auto});
-						$("#col4").css({height:auto});
-						$("#col5").css({height:auto});
-						$("#col6").css({height:auto});
-					else if (w > 520)
-					{	
-						var height1 = $("#debug2").height();
-						var height2 = $("#col2").height();
-						
-						var maxHeight1 = height1;
-						
-						if (height2 > height1)
-						{
-							maxHeight1 = height2;
-						}
-						
-						// Nastavi visino
-						$("#debug2").css({height:maxHeight1});
-						$("#col2").css({height:maxHeight1});
-						
-						var height3 = $("#col3").height();
-						var height4 = $("#col4").height();
-						
-						var maxHeight2 = height3;
-						
-						if (height4 > height2)
-						{
-							maxHeight2 = height4;
-						}
-						
-						// Nastavi visino
-						$("#col3").css({height:maxHeight2});
-						$("#col4").css({height:maxHeight2});
-						
-						var height5 = $("#col5").height();
-						var height6 = $("#col6").height();
-						
-						var maxHeight3 = height5;
-						
-						if (height6 > height5)
-						{
-							maxHeight3 = height6;
-						}
-						
-						// Nastavi visino
-						$("#col5").css({height:maxHeight3});
-						$("#col6").css({height:maxHeight3});
-						
-						//alert(maxHeight1 + ", " + maxHeight2);
+						maxHeight1 = height2;
 					}
-					else if (w > 961)
+					
+					// Nastavi visino
+					$("#debug2").css({height:maxHeight1});
+					$("#col2").css({height:maxHeight1});
+					
+					var height3 = $("#col3").height();
+					var height4 = $("#col4").height();
+					
+					var maxHeight2 = height3;
+					
+					if (height4 > height2)
 					{
-						var height1 = $("#debug2").height();
-						var height2 = $("#col2").height();
-						var height3 = $("#col3").height();
-						
-						var maxHeight1 = height1;
-						
-						if (height2 > height1)
-						{
-							maxHeight1 = height2;
-						}
-						
-						if (height3 > maxHeight1)
-						{
-							maxHeight1 = height3;
-						}
-						
-						$("#debug2").css({height:maxHeight1});
-						$("#col2").css({height:maxHeight1});
-						$("#col3").css({height:maxHeight1});
-						
-						var height4 = $("#col4").height();
-						var height5 = $("#col5").height();
-						var height6 = $("#col6").height();
-						
-						var maxHeight2 = height4;
-						
-						if (height5 > height4)
-						{
-							maxHeight2 = height5;
-						}
-						
-						if (height6 > maxHeight2)
-						{
-							maxHeight2 = height6;
-						}
-						
-						$("#col4").css({height:maxHeight2});
-						$("#col5").css({height:maxHeight2});
-						$("#col6").css({height:maxHeight2});
+						maxHeight2 = height4;
 					}
+					
+					// Nastavi visino
+					$("#col3").css({height:maxHeight2});
+					$("#col4").css({height:maxHeight2});
+					
+					var height5 = $("#col5").height();
+					var height6 = $("#col6").height();
+					
+					var maxHeight3 = height5;
+					
+					if (height6 > height5)
+					{
+						maxHeight3 = height6;
+					}
+					
+					// Nastavi visino
+					$("#col5").css({height:maxHeight3});
+					$("#col6").css({height:maxHeight3});
+					
+					//alert(maxHeight1 + ", " + maxHeight2);
+				}
+				else if (w > 961)
+				{
+					var height1 = $("#debug2").height();
+					var height2 = $("#col2").height();
+					var height3 = $("#col3").height();
+					
+					var maxHeight1 = height1;
+					
+					if (height2 > height1)
+					{
+						maxHeight1 = height2;
+					}
+					
+					if (height3 > maxHeight1)
+					{
+						maxHeight1 = height3;
+					}
+					
+					$("#debug2").css({height:maxHeight1});
+					$("#col2").css({height:maxHeight1});
+					$("#col3").css({height:maxHeight1});
+					
+					var height4 = $("#col4").height();
+					var height5 = $("#col5").height();
+					var height6 = $("#col6").height();
+					
+					var maxHeight2 = height4;
+					
+					if (height5 > height4)
+					{
+						maxHeight2 = height5;
+					}
+					
+					if (height6 > maxHeight2)
+					{
+						maxHeight2 = height6;
+					}
+					
+					$("#col4").css({height:maxHeight2});
+					$("#col5").css({height:maxHeight2});
+					$("#col6").css({height:maxHeight2});
 				}
 			}
 			/*$(document).ready(function()
@@ -173,7 +175,7 @@
 		</script>
 	</head>
 
-	<body onLoad="replaceImages(); setDynamicHeight();">
+	<body onLoad="replaceImages(); setHeight();" onresize="setHeight();">
 		<div class="wrap">
 			<div class="inner-wrap">
 				<div class="header">
