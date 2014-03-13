@@ -152,51 +152,6 @@
 				});
 			});*/
 			
-			function setHeight()
-			{	
-				var height1 = $("#debug2").height();
-				var height2 = $("#col2").height();
-				var height3 = $("#col3").height();
-				
-				var maxHeight1 = height1;
-				
-				if (height2 > height1)
-				{
-					maxHeight1 = height2;
-				}
-				
-				if (height3 > maxHeight1)
-				{
-					maxHeight1 = height3;
-				}
-				
-				$("#debug2").css({height:maxHeight1});
-				$("#col2").css({height:maxHeight1});
-				$("#col3").css({height:maxHeight1});
-				
-				var height4 = $("#col4").height();
-				var height5 = $("#col5").height();
-				var height6 = $("#col6").height();
-				
-				var maxHeight2 = height4;
-				
-				if (height5 > height4)
-				{
-					maxHeight2 = height5;
-				}
-				
-				if (height6 > maxHeight2)
-				{
-					maxHeight2 = height6;
-				}
-				
-				$("#col4").css({height:maxHeight2});
-				$("#col5").css({height:maxHeight2});
-				$("#col6").css({height:maxHeight2});
-				
-				//alert(maxHeight1 + ", " + maxHeight2);
-			}
-			
 			$(window).load(function(){
 				$(".offerbutton").click(function () {
 
