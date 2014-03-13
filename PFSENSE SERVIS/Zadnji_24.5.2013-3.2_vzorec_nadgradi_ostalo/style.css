@@ -981,7 +981,6 @@ and (max-width : 520px) {
 		width: auto;
 		/*height: auto; NE DELUJE! */
 		height: auto;
-		margin-bottom: 10%;
 		
 		clear: both;
 	}
