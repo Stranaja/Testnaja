@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+	<head>
+		<title>Kavarna Gazebo</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+		<!-- <link rel="shortcut icon" href="/favicon.ico" type="image/ico" /> -->
+	
+		<!-- include jQuery library -->
+		<!-- http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js
+		<script type="text/javascript" src="jquery.min.js"></script> -->
+		<!-- include Cycle plugin -->
+		<!-- http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js
+		<script type="text/javascript" src="jquery.cycle.lite.js"></script> -->
+		<script type='text/javascript' src="jquery-1.11.0.min.js"></script>
+	
+		<script type="text/javascript">
+		/* Thanks to CSS Tricks for pointing out this bit of jQuery
+			http://css-tricks.com/equal-height-blocks-in-rows/
+			It's been modified into a function called at page load and then each time the page is resized. One large modification was to remove the set height before each new calculation. */
+
+			equalheight = function(container)
+			{
+				var currentTallest = 0,
+				currentRowStart = 0,
+				rowDivs = new Array(),
+				$el,
+				topPosition = 0;
+			 
+				$(container).each(function() {
+
+			   $el = $(this);
+			   $($el).height('auto')
+			   topPostion = $el.position().top;
+
+			   if (currentRowStart != topPostion) {
+				 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+				   rowDivs[currentDiv].height(currentTallest);
+				 }
+				 rowDivs.length = 0; // empty the array
+				 currentRowStart = topPostion;
+				 currentTallest = $el.height();
+				 rowDivs.push($el);
+			   } else {
+				 rowDivs.push($el);
+				 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+			  }
+			   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+				 rowDivs[currentDiv].height(currentTallest);
+			   }
+			 });
+			}
+
+			$(window).load(function() {
+			  equalheight('.main article');
+			});
+
+			$(window).resize(function(){
+			  equalheight('.main article');
+			});		
+		</script>
+	</head>
+
+	<body>
+		<section class="main">
+			<article>
+				Gally maroon schooner wench provost fathom haul wind parrel chantey brigantine.
+			</article>
+			<article>
+				Ho six pounders Arr black spot port jib hogshead spirits bilge rat Admiral of the Black. Blow the man down measured fer yer chains hail-shot jolly boat gangway pillage lugsail wherry Jolly Roger Privateer.
+			</article>
+			<article>
+				Lass gangplank bilged on her anchor bring a spring upon her cable rigging lookout Admiral of the Black sheet wench rutters.
+			</article>
+			<article>
+				Driver rope's end port spirits cog fore ye snow sloop hogshead. Belaying pin yo-ho-ho bilge rat come about squiffy spirits jack galleon Brethren of the Coast hang the jib.
+			</article>
+			<article>
+				Hail-shot jolly boat gangway pillage lugsail wherry Jolly Roger Privateer.
+			</article>
+			<article>
+				Plate Fleet strike colors nipper league warp to go on 
+			</article>
+			<article>
+				Admiral of the Black sheet wench rutters.
+			</article>
+			<article>
+				Jack galleon Brethren of the Coast hang the jib. Blow the man down measured fer yer. Admiral of the Black sheet wench rutters.
+			</article>
+		</section>
+	</body>
+
+</html>

@@ -32,35 +32,106 @@
 					document.getElementById("img8").src="add8_retina.png";
 				}
 			}
+			
+			function getScrollbarWidth()
+			{
+				var outer = document.createElement("div");
+				outer.style.visibility = "hidden";
+				outer.style.width = "100px";
+				outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+				document.body.appendChild(outer);
+
+				var widthNoScroll = outer.offsetWidth;
+				// force scrollbars
+				outer.style.overflow = "scroll";
+
+				// add innerdiv
+				var inner = document.createElement("div");
+				inner.style.width = "100%";
+				outer.appendChild(inner);        
+
+				var widthWithScroll = inner.offsetWidth;
+
+				// remove divs
+				outer.parentNode.removeChild(outer);
+
+				if (debug == 1)
+				{
+					console.log(widthNoScroll - widthWithScroll);
+					document.getElementById("debug2").innerHTML = "Sirina scrollbara: " + (widthNoScroll - widthWithScroll);
+				}
+				
+				return widthNoScroll - widthWithScroll;
+			}
+			
+			equalheight = function(container)
+			{
+				var currentTallest = 0,
+				currentRowStart = 0,
+				rowDivs = new Array(),
+				$el,
+				topPosition = 0;
+			 
+				$(container).each(function()
+				{
+					$el = $(this);
+					$($el).height('auto')
+					topPostion = $el.position().top;
+
+					if (currentRowStart != topPostion)
+					{
+						for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++)
+						{
+							rowDivs[currentDiv].height(currentTallest);
+						}
+						rowDivs.length = 0; // empty the array
+						currentRowStart = topPostion;
+						currentTallest = $el.height();
+						rowDivs.push($el);
+					}
+					else
+					{
+						rowDivs.push($el);
+						currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+					}
+					
+					for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++)
+					{
+						rowDivs[currentDiv].height(currentTallest);
+					}
+				});
+			}
+			
+			var kolikokrat = 0;
 		
 			function setHeight()
 			{
 				var w=document.documentElement.clientWidth;
 				var h=document.documentElement.clientHeight;
 				
-				if (debug==1)
-				{	
-					var txt="Window size: width=" + w + ", height=" + h;
-					
-					// Izpisuje w/h v prvi promo logo
-					document.getElementById("debug1").innerHTML=txt;
-					
-					// Izpisuje w/h v login skatlo (gostje imajo...)"
-					document.getElementById("debug3").innerHTML=txt;
-				}
+				//console.log("\n");
+				//console.log("\nSirina: " + w);
+				//console.log("Visina: " + h);
+
+				$("#debug2").css('height','auto');
+				$("#col2").css('height','auto');
+				$("#col3").css('height','auto');
+				$("#col4").css('height','auto');
+				$("#col5").css('height','auto');
+				$("#col6").css('height','auto');
 				
-				if (w < 521)
+				var scrollBarWidth = getScrollbarWidth();
+				
+				if ((w > (520 - scrollBarWidth)) && (w < (962 - scrollBarWidth)))
 				{
-					$("#debug2").css({height:auto});
-					$("#col2").css({height:auto});
-					$("#col3").css({height:auto});
-					$("#col4").css({height:auto});
-					$("#col5").css({height:auto});
-					$("#col6").css({height:auto});
-				}
-				else if ((w > 520) && (w < 962))
-				{	
+					if (debug == 1)
+					{
+						console.clear();
+					}
+				
 					var height1 = $("#debug2").height();
+					
 					var height2 = $("#col2").height();
 					
 					var maxHeight1 = height1;
@@ -102,9 +173,19 @@
 					$("#col5").css({height:maxHeight3});
 					$("#col6").css({height:maxHeight3});
 					
-					//alert(maxHeight1 + ", " + maxHeight2);
+					if (debug == 1)
+					{
+						console.log("\n");
+						
+						console.log(">>>> DVA STOLPCA:::: " + kolikokrat);
+						
+						console.log("        max height 1: " + maxHeight1);
+						console.log("        max height 2: " + maxHeight2);
+						console.log("        max height 3: " + maxHeight3);
+					}
+					kolikokrat++;
 				}
-				else if (w > 961)
+				else if (w > (961 - scrollBarWidth))
 				{
 					var height1 = $("#debug2").height();
 					var height2 = $("#col2").height();
@@ -152,9 +233,20 @@
 				$('.banner-image').cycle({
 					fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 				});
-			});*/
+			});*/		
+
+			$(window).resize(function(){
+				//getScrollbarWidth();
+				setHeight();
+				//equalHeight('.page-content col');
+			});
 			
 			$(window).load(function(){
+				//getScrollbarWidth();
+				setHeight();
+				//equalHeight('.page-content col');
+				replaceImages();
+				
 				$(".offerbutton").click(function () {
 
 					$offerbutton = $(this);
@@ -175,7 +267,7 @@
 		</script>
 	</head>
 
-	<body onLoad="replaceImages(); setHeight();" onresize="setHeight();">
+	<body>
 		<div class="wrap">
 			<div class="inner-wrap">
 				<div class="header">
@@ -224,28 +316,91 @@
 					<div class="big-box">
 						<div class="page-content">
 							<div id="debug1" class="cene-col1 lifted">
-								<h3>Kava z rogljičkom</h3>						
-								<p>Kava z odličnim francoskim rogljičkom samo 2 EUR vsak dan od 8h do 11h.</p>
-								<p>Kava z odličnim francoskim rogljičkom samo 2 EUR vsak dan od 8h do 11h.</p>
-								<p>Kava z odličnim francoskim rogljičkom samo 2 EUR vsak dan od 8h do 11h.</p>
-								<p>Kava z odličnim francoskim rogljičkom samo 2 EUR vsak dan od 8h do 11h.</p>
-								<br>
+								<h3>Topli napitki</h3>
+
+								<table>
+									<tr>
+										<td class="td-left">Kava s smetano</td>
+										<td class="td-left">...</td> 
+										<td class="td-right">1,30</td>
+									</tr>
+									<tr>
+										<td class="td-left">Kakav s smetano in čokolado</td>
+										<td class="td-left">...</td> 
+										<td class="td-right">1,80</td>
+									</tr>
+									<tr>
+										<td class="td-left">Sladoled porcija</td>
+										<td class="td-left">...</td> 
+										<td class="td-right">2,80</td>
+									</tr>
+									<tr>
+										<td class="td-left">Goveja juha z rezanci</td>
+										<td class="td-left">...</td> 
+										<td class="td-right">3,60</td>
+									</tr>
+								</table>
 							</div>
 							<div class="cene-col2">
 								<h3>Izvrsten sladoled</h3>
-								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
-								<br>
+								<table style="width:100%">
+									<tr>
+									  <td>Kakav s smetano in čokolado</td>
+									  <td>...</td> 
+									  <td>1,80</td>
+									</tr>
+									<tr>
+									  <td>Sladoled porcija</td>
+									  <td>...</td> 
+									  <td>2,80</td>
+									</tr>
+									<tr>
+									  <td>Goveja juha z rezanci</td>
+									  <td>...</td> 
+									  <td>3,60</td>
+									</tr>
+								</table>
 							</div>
 							
 							<div class="cene-col1 lifted"> <!-- Brisi vse "lifted" -->
 								<h3>Bowling</h3>						
-								<p>Pri nas igrate bowling na dvanajstih najsodobnejših stezah. Izposoja opreme.</p>
-								<br>							
+								<table style="width:100%">
+									<tr>
+									  <td>Kava s smetano</td>
+									  <td>...</td> 
+									  <td>1,30</td>
+									</tr>
+									<tr>
+									  <td>Kakav s smetano in čokolado</td>
+									  <td>...</td> 
+									  <td>1,80</td>
+									</tr>
+									<tr>
+									  <td>Sladoled porcija</td>
+									  <td>...</td> 
+									  <td>2,80</td>
+									</tr>
+									<tr>
+									  <td>Goveja juha z rezanci</td>
+									  <td>...</td> 
+									  <td>3,60</td>
+									</tr>
+								</table>							
 							</div>
 							<div class="cene-col2  lifted">
 								<h3>Za najmlajše</h3>
-								<p>Vrt je opremljen z igrali v posebnem ograjenem prostoru za otroke.</p>
-								<br>
+								<table style="width:100%">
+									<tr>
+									  <td>Sladoled porcija</td>
+									  <td>...</td> 
+									  <td>2,80</td>
+									</tr>
+									<tr>
+									  <td>Goveja juha z rezanci</td>
+									  <td>...</td> 
+									  <td>3,60</td>
+									</tr>
+								</table>
 							</div>
 							
 							<!-- <div class="cene-col1">
@@ -266,15 +421,15 @@
 					<div class="clear"></div>
 					
 					<div class="big-box2">
-						<div class="page-content">
-							<div id="debug2" class="home-col1 lifted">
+						<div class="page-content2">
+							<div id="debug2" class="home-col">
 								<h3>Kava z rogljičkom</h3>
 								<div class = "promo-div">
 									<img src="promo1.jpg">
 								</div>						
 								<p>Kava z odličnim francoskim rogljičkom samo 2 EUR vsak dan od 8h do 11h.</p>
 							</div>
-							<div class="home-col2"  id="col2">
+							<div class="home-col"  id="col2">
 								<h3>Izvrsten sladoled</h3>
 								<div class = "promo-div">
 									<img src="promo2.jpg">
@@ -286,7 +441,7 @@
 								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
 								<p>Izberite si svojega iz naše bogate ponudbe mlečnih in sadnih sladoledov.</p>
 							</div>
-							<div class="home-col3 lifted" id="col3">
+							<div class="home-col" id="col3">
 								<h3>Slastni sendviči</h3>
 								<div class = "promo-div">
 									<img src="promo3.jpg">
@@ -296,7 +451,7 @@
 								<p>Bogata izbira slastnih sendvičev za vse okuse. Več vrst vegetarjanskih sedvičev.</p>						
 							</div>
 
-							<div class="home-col1 lifted" id="col4">
+							<div class="home-col" id="col4">
 								<h3>Bowling</h3>						
 								<p>Pri nas igrate bowling na dvanajstih najsodobnejših stezah. Izposoja opreme.</p>
 								<br>
@@ -305,7 +460,7 @@
 									<img src="promo4.jpg">
 								</div>							
 							</div>
-							<div class="home-col2  lifted" id="col5">
+							<div class="home-col" id="col5">
 								<h3>Za najmlajše</h3>
 								<p>Vrt je opremljen z igrali v posebnem ograjenem prostoru za otroke.</p>
 								<p>Vrt je opremljen z igrali v posebnem ograjenem prostoru za otroke.</p>
@@ -321,7 +476,7 @@
 									<img src="promo5.jpg">
 								</div>
 							</div>
-							<div class="home-col3 lifted" id="col6">
+							<div class="home-col" id="col6">
 								<h3>Brezplačen internet</h3>
 								<p>Gostom nudimo izredno hiter brezžični dostop do širokopasovnega interneta.</p>
 								<br>
