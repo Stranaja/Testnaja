@@ -475,6 +475,11 @@ table {
 	font-size: 16px;
 }
 
+table td {
+	padding: 5px;
+	vertical-align: bottom;
+}
+
 .td-left {
 	text-align: left;
 }
