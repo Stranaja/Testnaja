@@ -40,6 +40,16 @@ b/* @group Page Default */
 	src: url(Oregano-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  	font-family: 'Chalk';
+	src: url(Chalk.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'Brasserie';
+	src: url(Brasserie.ttf) format('truetype');
+}
+
 .block, #block, .display, #display { display: block; }
 .none, #none, .hide, #hide { display: none; }
 .clearboth, #clearboth, .clear, #clear { clear: both; }
@@ -472,24 +482,29 @@ img.promo-logo {
 
 table {
 	width: 100%;
-	font-size: 16px;
+	font-size: 24px;
+	border-spacing: 1px 10px;
+    border-collapse: separate;
 }
 
 table td {
 	padding: 5px;
 	vertical-align: bottom;
+	padding: 0px;
+	border-bottom-style:dotted;
+	border-bottom-width: 1px;
 }
 
 .td-left {
-	text-align: left;
+	text-align: left;	
 }
 
 .td-center {
-	text-align: center;
+	text-align: center;	
 }
 
 .td-right {
-	text-align: right;
+	text-align: right;	
 }
 
 .cene-col1, .cene-col2 {
@@ -500,7 +515,7 @@ table td {
 	/*text-align: left;*/
 	margin-bottom: 20px;
 	/*padding: 0 10px 0 0; padding?! */
-	background-color: #123123;
+	background-color: #143A14;
 
 	position:relative; /*Align image to bottom */
 	border: none;
@@ -511,11 +526,29 @@ table td {
 	padding-right: 2%;
 	
 	padding-top: 20px;
+	padding-bottom: 20px;
+	
+	color: #ffffff;
+	
+	/*font-family: 'Brasserie', Arial, Helvetica, sans-serif;*/
+	font-family: 'Chalk', Arial, Helvetica, sans-serif;
+   
+   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3)/*, 0 0 40px #698669 inset*/;
+	   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3)/*, 0 0 40px #698669 inset*/;
+			box-shadow:0 1px 4px rgba(0, 0, 0, 0.3)/*, 0 0 40px #698669 inset*/;
+	
+}
 
-	background:#ffffff;
-	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-			box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+.cene-col1 h3 {
+		color: #ffffff;
+		font-size: 40px;
+		font-family: 'Chalk', Arial, Helvetica, sans-serif;
+}
+
+.cene-col2 h3 {
+		color: #ffffff;
+		font-size: 40px;
+		font-family: 'Chalk', Arial, Helvetica, sans-serif;
 }
 
 .cene-col1 {
