@@ -41,13 +41,13 @@ b/* @group Page Default */
 }
 
 @font-face {
-  	font-family: 'Chalk';
-	src: url(Chalk.ttf) format('truetype');
+  	font-family: 'Brasserie';
+	src: url(Brasserie.ttf) format('truetype');
 }
 
 @font-face {
-  	font-family: 'Brasserie';
-	src: url(Brasserie.ttf) format('truetype');
+  	font-family: 'Chalk';
+	src: url(Chalk.ttf) format('truetype');
 }
 
 .block, #block, .display, #display { display: block; }
@@ -483,7 +483,7 @@ img.promo-logo {
 table {
 	width: 100%;
 	font-size: 24px;
-	border-spacing: 0px 10px;
+	border-spacing: 2px 10px;
     border-collapse: separate;
 }
 
@@ -495,9 +495,15 @@ table td {
 	border-bottom-width: 1px;
 }
 
+.dots  {
+	width: 100%;
+	border-bottom-style:dotted;
+	border-bottom-width: 1px;
+}
+
 .td-left {
 	text-align: left;
-	width: 70%;
+	width: 80%;
 }
 
 .td-center {
@@ -506,7 +512,7 @@ table td {
 
 .td-right {
 	text-align: right;
-	width: 30%;
+	width: 20%;
 }
 
 .cene-col1, .cene-col2 {
@@ -532,8 +538,8 @@ table td {
 	
 	color: #ffffff;
 	
-	/*font-family: 'Brasserie', Arial, Helvetica, sans-serif;*/
-	font-family: 'Chalk', Arial, Helvetica, sans-serif;
+	font-family: 'Brasserie', Arial, Helvetica, sans-serif;
+	/*font-family: 'Chalk', Arial, Helvetica, sans-serif;*/
    
    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3)/*, 0 0 40px #698669 inset*/;
 	   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3)/*, 0 0 40px #698669 inset*/;
@@ -541,16 +547,10 @@ table td {
 	
 }
 
-.cene-col1 h3 {
+.cene-col1 h3, .cene-col2 h3 {
 		color: #ffffff;
 		font-size: 40px;
-		font-family: 'Chalk', Arial, Helvetica, sans-serif;
-}
-
-.cene-col2 h3 {
-		color: #ffffff;
-		font-size: 40px;
-		font-family: 'Chalk', Arial, Helvetica, sans-serif;
+		font-family: 'Brasserie', Arial, Helvetica, sans-serif;
 }
 
 .cene-col1 {
@@ -1075,17 +1075,17 @@ and (max-width : 520px) {
 and (max-width : 460px) {
 
 	.cene-col1, .cene-col2 {
-		width: 80%; 
+		width: 92%; 
 	}
 
 	.cene-col1 {
-		margin-left: 8%;
-		margin-right: 8%;
+		margin-left: 2%;
+		margin-right: 2%;
 	}
 
 	.cene-col2 {
-		margin-left: 8%;
-		margin-right: 8%;
+		margin-left: 2%;
+		margin-right: 2%;
 	}
 }
 
@@ -1105,20 +1105,6 @@ and (max-width : 400px) {
 /* One column 4 */
 @media only screen
 and (max-width : 340px) {
-
-	.cene-col1, .cene-col2 {
-		width: 92%; 
-	}
-
-	.cene-col1 {
-		margin-left: 2%;
-		margin-right: 2%;
-	}
-
-	.cene-col2 {
-		margin-left: 2%;
-		margin-right: 2%;
-	}
 	
 	.home-col h3 {
 		font-size: 22px;
