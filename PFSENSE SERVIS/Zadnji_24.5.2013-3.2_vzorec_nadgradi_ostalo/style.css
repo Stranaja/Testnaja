@@ -483,7 +483,7 @@ img.promo-logo {
 table {
 	width: 100%;
 	font-size: 24px;
-	border-spacing: 1px 10px;
+	border-spacing: 0px 10px;
     border-collapse: separate;
 }
 
@@ -496,7 +496,8 @@ table td {
 }
 
 .td-left {
-	text-align: left;	
+	text-align: left;
+	width: 70%;
 }
 
 .td-center {
@@ -504,7 +505,8 @@ table td {
 }
 
 .td-right {
-	text-align: right;	
+	text-align: right;
+	width: 30%;
 }
 
 .cene-col1, .cene-col2 {
