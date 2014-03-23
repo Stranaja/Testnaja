@@ -519,9 +519,12 @@ table td {
 }
 
 .cene-col1 h3, .cene-col2 h3 {
+		display: inline;
 		color: #ffffff;
 		font-size: 40px;
-		font-family: 'Brasserie', Arial, Helvetica, sans-serif;
+		/*font-family: Brasserie, Arial, Helvetica, sans-serif;*/
+		
+		font-family: 'Oregano-Regular', Arial, Helvetica, sans-serif;
 }
 
 .cene-col1 {
@@ -736,7 +739,6 @@ and (min-width : 1650px) {
 	}
 
 	.cene-col1 {
-		margin-left: 12%;
 		margin-left: 12%;
 		margin-right: 30%;
 	}
