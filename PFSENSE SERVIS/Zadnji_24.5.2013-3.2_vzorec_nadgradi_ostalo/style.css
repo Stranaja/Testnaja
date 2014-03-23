@@ -87,12 +87,55 @@ li {
 	padding: 3px 0px 3px 0px;	
 }
 
+.buttonpricelist {
+	font: 25px/1.5 Helvetica, Arial, sans-serif;
+	display: block;
+	background: #17d117;   /*barva gumb internet*/
+	margin: 0 auto;
+           
+	border: none;
+	color: white;
+		
+	text-decoration: none;
+	line-height: 24px;
+	cursor: pointer;
+	overflow: hidden;
+	height: 72px;
+	width: 100%;
+	
+	float: right;
+    clear: right;
 
-.offerbutton {
-    background-color:#d3d3d3;
-    padding: 2px;
-    cursor: pointer;
-    font-weight: bold;
+	/*Transition*/
+	-webkit-transition: All 0.5s ease;
+	-moz-transition: All 0.5s ease;
+	-o-transition: All 0.5s ease;
+	-ms-transition: All 0.5s ease;
+	transition: All 0.5s ease;
+
+	/*Gradient*/
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+
+	/*Shadow*/
+  	-webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+
+	/*Disable button text selection*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.buttonpricelist::-moz-focus-inner {
+  border: 0;
 }
 
 
