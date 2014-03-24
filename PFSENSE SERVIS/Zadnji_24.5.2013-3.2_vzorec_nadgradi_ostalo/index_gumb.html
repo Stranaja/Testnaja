@@ -255,6 +255,10 @@
 							//change text based on condition
 							//return $content.is(":visible") ? "Skrij" : "Naša ponudba";
 						});
+						$(".arrow").text(function () {
+							//change text based on condition
+							return $content.is(":visible") ? "Ponudba" : "Tekst";
+						});
 					});
 				});
 			});
@@ -304,12 +308,11 @@
 						<div class="clear"></div>
 					</div><!--banner-->
 					
+					<!-- Gumb cene -->
 					<div class="buttonpricelist">
-						
 						<div class="cene-button-text">Naša ponudba
 							<div class="arrow">Tekst</div>
 						</div>
-						
 					</div>
 					
 					<div class="big-box">

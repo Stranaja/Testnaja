@@ -147,7 +147,9 @@ li {
 }
 
 .arrow {
-    width:auto;
+    width: auto;
+	float: right;
+	padding-right: 10px;
 }
 
 a {
