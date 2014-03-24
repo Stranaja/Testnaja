@@ -88,23 +88,18 @@ li {
 }
 
 .buttonpricelist {
-	font: 25px/1.5 Helvetica, Arial, sans-serif;
 	display: block;
 	background: #17d117;   /*barva gumb internet*/
 	/*margin: 0 auto;*/
            
 	border: none;
-	color: white;
-		
+	color: white;		
 	text-decoration: none;
-	line-height: 24px;
+	
 	cursor: pointer;
 	overflow: hidden;
 	height: 72px;
 	width: 100%;
-	
-	float: right;
-    clear: right;
 
 	/*Transition*/
 	-webkit-transition: All 0.5s ease;
@@ -134,10 +129,26 @@ li {
 	user-select: none;
 }
 
+.cene-button-text {
+    line-height: 72px;
+	padding-left: 10px;
+	font-family: 'Oregano-Regular', Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	color: white;
+}
+
 .buttonpricelist::-moz-focus-inner {
   border: 0;
 }
 
+.buttonpricelist:hover {
+	cursor:pointer;
+	background-color: #34ff34;
+}
+
+.arrow {
+    width:auto;
+}
 
 a {
 	text-decoration: none;
@@ -448,8 +459,8 @@ img.promo-logo {
 }
 
 .page-content {
-	background: url(cene.jpg) no-repeat;
-	background-size:200%;
+	/*background: url(cene.jpg) no-repeat;
+	background-size:200%;*/
 }
 
 /*.page-content  img {
