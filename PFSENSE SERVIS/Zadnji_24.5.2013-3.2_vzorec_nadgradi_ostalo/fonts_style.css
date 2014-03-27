@@ -1,0 +1,162 @@
+@font-face {
+  	font-family: 'akaDylan-Collage';
+	src: url(akaDylan-Collage.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'akaDylan-Open';
+	src: url(akaDylan-Open.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'akaDylan-Plain';
+	src: url(akaDylan-Plain.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'ccaps';
+	src: url(ccaps.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'ccapshad';
+	src: url(ccapshad.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'CHIP KNIP';
+	src: url(CHIP KNIP.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'CHIP KNIP_2';
+	src: url(CHIP KNIP_2.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'GAGARIN_';
+	src: url(GAGARIN_.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'GAGASM__';
+	src: url(GAGASM__.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'Mikodacs';
+	src: url(Mikodacs.otf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'MikodacsPCS';
+	src: url(MikodacsPCS.otf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'rof_top_simple';
+	src: url(rof_top_simple.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'Sans-Sara';
+	src: url(Sans-Sara.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'spokes';
+	src: url(spokes.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'TrashCinemaBB';
+	src: url(TrashCinemaBB.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'TrashCinemaBB_ital';
+	src: url(TrashCinemaBB_ital.ttf) format('truetype');
+}
+
+@font-face {
+  	font-family: 'Unocide';
+	src: url(Unocide.ttf) format('truetype');
+}
+
+p  {
+	font-size: 40px;
+}
+
+.p1 {
+	font-family: 'akaDylan-Collage', Arial, Helvetica, sans-serif;
+}
+
+.p2 {
+	font-family: 'akaDylan-Open', Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+	font-family: 'akaDylan-Plain', Arial, Helvetica, sans-serif;
+}
+
+.p4 {
+	font-family: 'ccaps', Arial, Helvetica, sans-serif;
+}
+
+.p5 {
+	font-family: 'ccapshad', Arial, Helvetica, sans-serif;
+}
+
+.p6 {
+	font-family: 'CHIP KNIP', Arial, Helvetica, sans-serif;
+}
+
+.p7 {
+	font-family: 'CHIP KNIP_2', Arial, Helvetica, sans-serif;
+}
+
+.p8 {
+	font-family: 'GAGARIN_', Arial, Helvetica, sans-serif;
+}
+
+.p9 {
+	font-family: 'GAGASM__', Arial, Helvetica, sans-serif;
+}
+
+.p10 {
+	font-family: 'Mikodacs', Arial, Helvetica, sans-serif;
+}
+
+.p111{
+	font-family: 'MikodacsPCS', Arial, Helvetica, sans-serif;
+}
+
+.p12 {
+	font-family: 'rof_top_simple', Arial, Helvetica, sans-serif;
+}
+
+.p13 {
+	font-family: 'Sans-Sara', Arial, Helvetica, sans-serif;
+}
+
+.p14 {
+	font-family: 'spokes', Arial, Helvetica, sans-serif;
+}
+
+.p15 {
+	font-family: 'TrashCinemaBB', Arial, Helvetica, sans-serif;
+}
+
+.p16 {
+	font-family: 'TrashCinemaBB_ital', Arial, Helvetica, sans-serif;
+}
+
+.p17 {
+	font-family: 'Unocide', Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+

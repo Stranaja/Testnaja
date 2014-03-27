@@ -36,6 +36,11 @@ b/* @group Page Default */
 	src: url(Oregano-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  	font-family: 'ccaps';
+	src: url(ccaps.ttf) format('truetype');
+}
+
 .block, #block, .display, #display { display: block; }
 .none, #none, .hide, #hide { display: none; }
 .clearboth, #clearboth, .clear, #clear { clear: both; }
@@ -148,8 +153,26 @@ li {
 
 .arrow {
     width: auto;
-	float: right;
-	padding-right: 10px;
+	float: right;	
+	width: 80px;
+	
+	font-family: 'ccaps', Arial, Helvetica, sans-serif;	
+	font-size: 60px;
+	
+	color: white;
+	
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+	
+	/*background-color: red;*/	
+	transform-origin: center;	
+	text-align: center;
+}
+
+.arrow.active {
+	-ms-transform:rotate(90deg); 		/* IE 9 */
+	-webkit-transform:rotate(90deg);	/* Opera, Chrome, and Safari */
+	transform:rotate(90deg);
 }
 
 a {

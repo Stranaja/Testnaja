@@ -243,7 +243,9 @@
 				replaceImages();
 				
 				$(".buttonpricelist").click(function () {
-
+				
+					$(".arrow").toggleClass('active');
+				
 					$buttonpricelist = $(this);
 					//getting the next element
 					$content = $buttonpricelist.next();
@@ -255,12 +257,13 @@
 							//change text based on condition
 							//return $content.is(":visible") ? "Skrij" : "Naša ponudba";
 						});
-						$(".arrow").text(function () {
+						/*$(".arrow").text(function () {
 							//change text based on condition
 							return $content.is(":visible") ? "Ponudba" : "Tekst";
 							// Animacija; http://codepen.io/srig99/pen/KeswC
-						});
-					});
+						});*/
+					});					
+					//$(".arrow").toggleClass('active');
 				});
 			});
 			
@@ -312,7 +315,7 @@
 					<!-- Gumb cene -->
 					<div class="buttonpricelist">
 						<div class="cene-button-text">Naša ponudba
-							<div class="arrow">Tekst</div>
+							<div class="arrow">></div>
 						</div>
 					</div>
 					
